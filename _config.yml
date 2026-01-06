@@ -20,18 +20,18 @@ sidebar_menu:
     url: "/"
 
   - title: "Ensino Médio"
-    url: "includes/EM/"
+    url: "/EM/EM.html" 
     subpages:
       - title: "Mecânica"
-        url: "includes/EM/mecanica.html"
+        url: "/EM/mecanica.html"
       - title: "Termodinâmica"
-        url: "includes/EM/termo.html"
+        url: "/EM/termo.html"
 
   - title: "Ensino Superior"
-    url: "includes/ES/"
+    url: "/ES/ES.html"
     subpages:
       - title: "Mecânica Quântica"
-        url: "includes/ES/quantica.html"
+        url: "/ES/quantica.html"
       - title: "Altas Energias"
-        url: "includes/ES/altas-energias.html"
+        url: "/ES/altas-energias.html"
 
