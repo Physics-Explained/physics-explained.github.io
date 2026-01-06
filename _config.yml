@@ -1,5 +1,7 @@
 # 1. IDENTIDADE DO SITE
-title: "Physics Explained | Prof. Raul G. Quartieri"
+title: "Physics Explained"
+tagline: "Prof. Raul G. Quartieri"
+logo: "/assets/logo.png" # Certifique-se de subir sua logo nesta pasta
 email: "seuemail@exemplo.com"
 description: >-
   Da Mecânica Clássica às Altas Energias. Conteúdo didático e 
@@ -8,7 +10,7 @@ author: "Raul G. Quartieri"
 
 # 2. CONFIGURAÇÕES DE URL (Essencial para GitHub Pages)
 url: "https://physics-explained.github.io"
-baseurl: "" # Deixe vazio para o domínio principal
+baseurl: "" 
 
 # 3. REDES SOCIAIS E ACADÊMICAS
 instagram_user: "https://www.instagram.com/prof.raulquartieri/"

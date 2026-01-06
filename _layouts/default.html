@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }}</title>
+    <title>{{ page.title }} | {{ site.title }}</title>
     
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -16,7 +16,7 @@
             margin: 0; 
             padding: 0; 
             color: #333; 
-            display: flex; /* Habilita o layout em colunas */
+            display: flex; 
             min-height: 100vh;
         }
 
@@ -28,27 +28,13 @@
             padding: 30px 20px;
             box-sizing: border-box;
         }
-        .sidebar h3 { 
-            color: #0056b3; 
-            font-size: 1.2em; 
-            margin-top: 0;
-        }
+        .sidebar h3 { color: #0056b3; font-size: 1.2em; margin-top: 0; }
         .sidebar ul { list-style: none; padding: 0; }
         .sidebar li { margin-bottom: 15px; }
-        .sidebar a { 
-            text-decoration: none; 
-            color: #333; 
-            font-weight: bold; 
-            transition: 0.2s;
-        }
+        .sidebar a { text-decoration: none; color: #333; font-weight: bold; transition: 0.2s; }
         .sidebar a:hover { color: #0056b3; }
         
-        /* Sub-itens da Sidebar */
-        .sub-menu { 
-            padding-left: 15px; 
-            margin-top: 10px; 
-            border-left: 1px solid #ddd;
-        }
+        .sub-menu { padding-left: 15px; margin-top: 10px; border-left: 1px solid #ddd; }
         .sub-menu li { margin-bottom: 8px; font-size: 0.9em; }
         .sub-menu a { font-weight: normal; color: #666; }
 
@@ -57,22 +43,33 @@
             flex: 1; 
             display: flex;
             flex-direction: column;
-            align-items: center; /* Centraliza o conteúdo horizontalmente */
+            align-items: center; 
             padding: 40px 20px;
         }
         
-        main { 
-            width: 100%;
-            max-width: 800px; /* Mantém o texto em uma largura legível */
-        }
+        main { width: 100%; max-width: 800px; }
 
+        /* NOVO HEADER COM LOGO */
         header { 
             border-bottom: 2px solid #0056b3; 
             padding-bottom: 20px; 
             margin-bottom: 30px; 
-            text-align: center;
             width: 100%;
         }
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+        .site-logo {
+            width: 60px;
+            height: auto;
+            margin-right: 20px;
+        }
+        .header-text { text-align: left; }
+        .site-title { margin: 0; color: #0056b3; font-size: 1.8em; }
+        .site-tagline { margin: 0; color: #666; font-size: 1em; }
         
         h1, h2 { color: #0056b3; }
         
@@ -97,14 +94,11 @@
             transition: 0.3s;
         }
         .cta-button:hover { background: #128c7e; }
-
-        .cta-button.instagram { 
-            background: #E1306C; 
-        }
+        .cta-button.instagram { background: #E1306C; }
         .cta-button.instagram:hover { background: #C13584; }
 
         footer { 
-            margin-top: auto; /* Empurra o footer para o fim da página */
+            margin-top: auto; 
             font-size: 0.8em; 
             color: #777; 
             text-align: center; 
@@ -114,10 +108,12 @@
             max-width: 800px;
         }
 
-        /* 4. Responsividade (Mobile) */
         @media (max-width: 768px) {
             body { flex-direction: column; }
             .sidebar { width: 100%; border-right: none; border-bottom: 2px solid #0056b3; }
+            .header-container { flex-direction: column; text-align: center; }
+            .site-logo { margin-right: 0; margin-bottom: 10px; }
+            .header-text { text-align: center; }
         }
     </style>
 </head>
@@ -145,8 +141,15 @@
 
     <div class="main-wrapper">
         <header>
-            <h1>{{ page.header_title }}</h1>
-            <p>{{ page.header_subtitle }}</p>
+            <a href="{{ '/' | relative_url }}" class="header-container">
+                {% if site.logo %}
+                <img src="{{ site.logo | relative_url }}" alt="Logo" class="site-logo">
+                {% endif %}
+                <div class="header-text">
+                    <h1 class="site-title">{{ site.title }}</h1>
+                    <p class="site-tagline">{{ site.tagline }}</p>
+                </div>
+            </a>
         </header>
 
         <main>
