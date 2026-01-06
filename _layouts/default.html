@@ -5,12 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
     
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> <!-- Polyfill for ES6 support -->
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> <!-- MathJax for rendering LaTeX equations -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
     <style>
-        /* Cole aqui todo o seu CSS que você já criou */
-        body { font-family: 'Segoe UI', sans-serif; }
+        /* O segredo da centralização e cores está aqui */
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            line-height: 1.6; 
+            max-width: 800px; 
+            margin: 0 auto; /* Isso centraliza o site no desktop */
+            padding: 20px; 
+            color: #333; 
+        }
+        header { 
+            border-bottom: 2px solid #0056b3; 
+            padding-bottom: 20px; 
+            margin-bottom: 30px; 
+            text-align: center; /* Centraliza o cabeçalho */
+        }
+        h1, h2 { color: #0056b3; }
+        
+        .equation { 
+            background: #f4f4f4; 
+            padding: 15px; 
+            border-radius: 8px; 
+            margin: 20px 0; 
+            overflow-x: auto; 
+            text-align: center;
+        }
+
+        .cta-container { text-align: center; margin-top: 40px; }
+        
+        .cta-button { 
+            display: inline-block; 
+            background: #25d366; 
+            color: white; 
+            padding: 12px 25px; 
+            text-decoration: none; 
+            border-radius: 5px; 
+            font-weight: bold; 
+            transition: 0.3s;
+        }
+        .cta-button:hover { background: #128c7e; }
+
+        footer { 
+            margin-top: 50px; 
+            font-size: 0.8em; 
+            color: #777; 
+            text-align: center; 
+            border-top: 1px solid #eee; 
+            padding-top: 20px; 
+        }
     </style>
 </head>
 <body>
@@ -19,7 +65,9 @@
         <p>{{ page.header_subtitle }}</p>
     </header>
 
-    {{ content }}
+    <main>
+        {{ content }}
+    </main>
 
     <footer>
         <p>&copy; 2026 {{ page.author }} - Hospedado via GitHub Pages</p>
