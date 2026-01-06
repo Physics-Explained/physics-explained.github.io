@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> <!-- Polyfill for ES6 support -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> <!-- MathJax for rendering LaTeX equations -->
+    
+    <style>
+        /* Cole aqui todo o seu CSS que você já criou */
+        body { font-family: 'Segoe UI', sans-serif; ... }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>{{ page.header_title }}</h1>
+        <p>{{ page.header_subtitle }}</p>
+    </header>
+
+    {{ content }}
+
+    <footer>
+        <p>&copy; 2026 {{ page.author }} - Hospedado via GitHub Pages</p>
+    </footer>
+</body>
+</html>
