@@ -1,0 +1,48 @@
+# 1. IDENTIDADE DO SITE
+title: "Physics Explained | Prof. Raul G. Quartieri"
+email: "seuemail@exemplo.com"
+description: >-
+  Da Mecânica Clássica às Altas Energias. Conteúdo didático e 
+  divulgação científica por um doutorando em Física.
+author: "Raul G. Quartieri"
+
+# 2. CONFIGURAÇÕES DE URL (Essencial para GitHub Pages)
+url: "https://physics-explained.github.io"
+baseurl: "" # Deixe vazio para o domínio principal
+
+# 3. REDES SOCIAIS E ACADÊMICAS
+instagram_user: "seu_instagram"
+lattes_url: "http://lattes.cnpq.br/seu-id"
+
+# 4. MENU DA BARRA LATERAL (Hierarquia Dinâmica)
+sidebar_menu:
+  - title: "Início"
+    url: "/"
+  - title: "Ensino Médio"
+    url: "/ensino-medio/"
+    subpages:
+      - title: "Mecânica"
+        url: "/ensino-medio/mecanica"
+      - title: "Termodinâmica"
+        url: "/ensino-medio/termo"
+  - title: "Ensino Superior"
+    url: "/ensino-superior/"
+    subpages:
+      - title: "Mecânica Quântica"
+        url: "/ensino-superior/quantica"
+      - title: "Altas Energias"
+        url: "/ensino-superior/altas-energias"
+
+# 5. CONFIGURAÇÕES TÉCNICAS
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# 6. EXCLUSÕES
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - .jekyll-cache
+  - .jekyll-metadata
