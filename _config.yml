@@ -26,7 +26,7 @@ sidebar_menu:
         url: "/includes/EM/mecanica.html"
       - title: "Termodinâmica"
         url: "/includes/EM/termo.html"
-        
+
   - title: "Ensino Superior"
     url: "/includes/EM/"
     subpages:
@@ -41,10 +41,3 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-
-# 6. EXCLUSÕES
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - .jekyll-cache
-  - .jekyll-metadata
