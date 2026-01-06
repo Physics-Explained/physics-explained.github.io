@@ -18,20 +18,22 @@ lattes_url: "http://lattes.cnpq.br/seu-id"
 sidebar_menu:
   - title: "Início"
     url: "/"
+
   - title: "Ensino Médio"
-    url: "/ensino-medio/"
+    url: "/includes/EM/"
     subpages:
       - title: "Mecânica"
-        url: "/ensino-medio/mecanica"
+        url: "/includes/EM/mecanica.html"
       - title: "Termodinâmica"
-        url: "/ensino-medio/termo"
+        url: "/includes/EM/termo.html"
+        
   - title: "Ensino Superior"
-    url: "/ensino-superior/"
+    url: "/includes/EM/"
     subpages:
       - title: "Mecânica Quântica"
-        url: "/ensino-superior/quantica"
+        url: "/includes/EM/quantica.html"
       - title: "Altas Energias"
-        url: "/ensino-superior/altas-energias"
+        url: "/includes/EM/altas-energias.html"
 
 # 5. CONFIGURAÇÕES TÉCNICAS
 markdown: kramdown
